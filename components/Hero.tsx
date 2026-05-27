@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section
@@ -24,7 +26,10 @@ export default function Hero() {
       >
         {/* LEFT SIDE */}
         <div>
-          <h1
+          <motion.h1
+  initial={{ opacity: 0, y: 60 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
             style={{
               fontSize: "72px",
               lineHeight: "1.1",
@@ -37,9 +42,12 @@ export default function Hero() {
             Solutions For
             <br />
             Modern Businesses
-          </h1>
+          </motion.h1>
 
-          <p
+          <motion.p
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.2, duration: 0.8 }}
             style={{
               fontSize: "22px",
               lineHeight: "1.8",
@@ -50,10 +58,13 @@ export default function Hero() {
             EduAdminX provides RFID systems, website development,
             desktop applications, smart attendance platforms,
             card printing solutions and enterprise automation services.
-          </p>
+          </motion.p>
 
           {/* BUTTONS */}
-          <div
+          <motion.div
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.4, duration: 0.8 }}
             style={{
               display: "flex",
               gap: "20px",
@@ -90,79 +101,93 @@ export default function Hero() {
             >
               Explore Services
             </button>
-          </div>
+          </motion.div>
         </div>
 
         {/* RIGHT SIDE CARDS */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "25px",
-          }}
-        >
-          {[
-            {
-              title: "RFID Attendance",
-              desc: "Smart attendance & tracking systems",
-              icon: "📡",
-            },
-            {
-              title: "Website Development",
-              desc: "Modern business & school websites",
-              icon: "🌐",
-            },
-            {
-              title: "Desktop Applications",
-              desc: "Custom Windows software solutions",
-              icon: "💻",
-            },
-            {
-              title: "RFID Cards & Devices",
-              desc: "Cards, gates & access systems",
-              icon: "🪪",
-            },
-          ].map((service, index) => (
-            <div
-              key={index}
-              style={{
-                background: "rgba(255,255,255,0.06)",
-                border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: "22px",
-                padding: "30px",
-                backdropFilter: "blur(12px)",
-                transition: "0.3s",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: "42px",
-                  marginBottom: "18px",
-                }}
-              >
-                {service.icon}
-              </div>
+        <motion.div
+  initial={{ opacity: 0, x: 40 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ delay: 0.3, duration: 0.8 }}
+  style={{
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: "25px",
+  }}
+>
+  {[
+    {
+      title: "RFID Attendance",
+      desc: "Smart attendance & tracking systems",
+      icon: "📡",
+    },
+    {
+      title: "Website Development",
+      desc: "Modern business & school websites",
+      icon: "🌐",
+    },
+    {
+      title: "Desktop Applications",
+      desc: "Custom Windows software solutions",
+      icon: "💻",
+    },
+    {
+      title: "RFID Cards & Devices",
+      desc: "Cards, gates & access systems",
+      icon: "🪪",
+    },
+  ].map((service, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.6,
+        delay: index * 0.1,
+      }}
+      whileHover={{
+        y: -8,
+        scale: 1.03,
+      }}
+      style={{
+        background: "rgba(255,255,255,0.06)",
+        border: "1px solid rgba(255,255,255,0.08)",
+        borderRadius: "22px",
+        padding: "30px",
+        backdropFilter: "blur(12px)",
+        transition: "0.3s",
+      }}
+    >
+      <div
+        style={{
+          fontSize: "42px",
+          marginBottom: "18px",
+        }}
+      >
+        {service.icon}
+      </div>
 
-              <h3
-                style={{
-                  fontSize: "24px",
-                  marginBottom: "14px",
-                }}
-              >
-                {service.title}
-              </h3>
+      <h3
+        style={{
+          fontSize: "24px",
+          marginBottom: "14px",
+        }}
+      >
+        {service.title}
+      </h3>
 
-              <p
-                style={{
-                  color: "#cbd5e1",
-                  lineHeight: "1.7",
-                }}
-              >
-                {service.desc}
-              </p>
-            </div>
-          ))}
-        </div>
+      <p
+        style={{
+          color: "#cbd5e1",
+          lineHeight: "1.7",
+        }}
+      >
+        {service.desc}
+      </p>
+    </motion.div>
+  ))}
+</motion.div>
       </div>
     </section>
   );
