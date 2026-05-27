@@ -14,7 +14,7 @@ export default function Hero() {
         color: "white",
       }}
     >
-      <div
+     <div className="hero-grid"
         style={{
           maxWidth: "1300px",
           width: "100%",
@@ -31,7 +31,7 @@ export default function Hero() {
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}
             style={{
-              fontSize: "72px",
+              fontSize: "clamp(42px, 8vw, 72px)",
               lineHeight: "1.1",
               fontWeight: "bold",
               marginBottom: "30px",
@@ -49,7 +49,7 @@ export default function Hero() {
   animate={{ opacity: 1, y: 0 }}
   transition={{ delay: 0.2, duration: 0.8 }}
             style={{
-              fontSize: "22px",
+              fontSize: "clamp(16px, 3vw, 22px)",
               lineHeight: "1.8",
               color: "#cbd5e1",
               marginBottom: "40px",
