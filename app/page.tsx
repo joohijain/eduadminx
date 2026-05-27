@@ -68,22 +68,24 @@ export default function Home() {
             flexWrap: "wrap",
           }}
         >
-          <button
-            style={{
-              background:
-                "linear-gradient(to right, #06b6d4, #a21caf)",
-              border: "none",
-              color: "white",
-              padding: "16px 34px",
-              borderRadius: "12px",
-              fontSize: "18px",
-              fontWeight: "bold",
-              cursor: "pointer",
-              boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
-            }}
-          >
-            Book Free Demo
-          </button>
+          <a
+  href="/demo"
+  style={{
+    display: "inline-block",
+    background:
+      "linear-gradient(to right, #06b6d4, #a21caf)",
+    color: "white",
+    padding: "16px 34px",
+    borderRadius: "12px",
+    fontSize: "18px",
+    fontWeight: "bold",
+    textDecoration: "none",
+    cursor: "pointer",
+    boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
+  }}
+>
+  Book Free Demo
+</a>
 
           <button
             style={{
@@ -411,21 +413,24 @@ export default function Home() {
             can modernize your institution.
           </p>
 
-          <button
-            style={{
-              background:
-                "linear-gradient(to right, #06b6d4, #a21caf)",
-              border: "none",
-              color: "white",
-              padding: "18px 40px",
-              borderRadius: "14px",
-              fontSize: "20px",
-              fontWeight: "bold",
-              cursor: "pointer",
-            }}
-          >
-            Request Free Demo
-          </button>
+          <a
+  href="/demo"
+  style={{
+    display: "inline-block",
+    background:
+      "linear-gradient(to right, #06b6d4, #a21caf)",
+    border: "none",
+    color: "white",
+    padding: "18px 40px",
+    borderRadius: "14px",
+    fontSize: "20px",
+    fontWeight: "bold",
+    cursor: "pointer",
+    textDecoration: "none",
+  }}
+>
+  Request Free Demo
+</a>
         </div>
       </section>
 
