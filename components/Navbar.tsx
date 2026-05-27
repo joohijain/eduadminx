@@ -1,3 +1,5 @@
+import Logo from "./Logo";
+import Link from "next/link";
 export default function Navbar() {
   return (
     <nav
@@ -15,17 +17,7 @@ export default function Navbar() {
       }}
     >
       {/* LOGO */}
-      <div
-        style={{
-          fontSize: "34px",
-          fontWeight: "bold",
-          color: "white",
-        }}
-      >
-        <span style={{ color: "#22d3ee" }}>Edu</span>
-        <span>Admin</span>
-        <span style={{ color: "#d946ef" }}>X</span>
-      </div>
+      <Logo />
 
       {/* MENU */}
       <div
@@ -37,21 +29,21 @@ export default function Navbar() {
           alignItems: "center",
         }}
       >
-        <a href="/" style={{ color: "white", textDecoration: "none" }}>
+        <Link href="/" style={{ color: "white", textDecoration: "none" }}>
           Home
-        </a>
+        </Link>
 
-        <a href="/services" style={{ color: "white", textDecoration: "none" }}>
+        <Link href="/services" style={{ color: "white", textDecoration: "none" }}>
           Services
-        </a>
+        </Link>
 
-        <a href="/about" style={{ color: "white", textDecoration: "none" }}>
+        <Link href="/about" style={{ color: "white", textDecoration: "none" }}>
           About
-        </a>
+        </Link>
 
-        <a href="/contact" style={{ color: "white", textDecoration: "none" }}>
+        <Link href="/contact" style={{ color: "white", textDecoration: "none" }}>
           Contact
-        </a>
+        </Link>
 
         <button
           style={{
