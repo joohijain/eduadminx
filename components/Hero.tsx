@@ -10,7 +10,7 @@ export default function Hero() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "120px 40px 80px",
+        padding: "120px 20px 60px",
         color: "white",
       }}
     >
@@ -19,7 +19,7 @@ export default function Hero() {
           maxWidth: "1300px",
           width: "100%",
           display: "grid",
-          gridTemplateColumns: "1fr 1fr",
+          gridTemplateColumns: "1fr",
           gap: "60px",
           alignItems: "center",
         }}

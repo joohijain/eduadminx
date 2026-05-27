@@ -20,10 +20,11 @@ export default function Navbar() {
       <Logo />
 
       {/* MENU */}
-      <div
+      <div 
         style={{
           display: "flex",
-          gap: "30px",
+          flexWrap: "wrap",
+          gap: "16px",
           color: "white",
           fontSize: "16px",
           alignItems: "center",
