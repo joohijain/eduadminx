@@ -80,7 +80,7 @@ export default function ContactPage() {
               color: "#cbd5e1",
             }}
           >
-            <div>📞 +91-9560064285</div>
+            <div>📞 +91-9729061588</div>
 
             <div>📧 info@eduadminx.com</div>
 

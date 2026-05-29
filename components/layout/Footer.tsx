@@ -114,7 +114,7 @@ export default function Footer() {
               color: "#cbd5e1",
             }}
           >
-            <span>📞 +91-9560064285</span>
+            <span>📞 +91-9729061588</span>
             <span>📧 info@eduadminx.com</span>
             <span>📍 India</span>
           </div>
