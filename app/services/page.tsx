@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function ServicesPage() {
   const services = [
     {
@@ -16,19 +17,19 @@ export default function ServicesPage() {
     title: "Desktop Applications",
     icon: "💻",
     desc: "Custom Windows software applications for administration, billing and management systems.",
-    link: "/services/desktop-applications",
+    link: "/services/software-development",
   },
   {
     title: "RFID Hardware Solutions",
     icon: "🪪",
     desc: "RFID printed cards, UHF readers, gates and smart access hardware devices.",
-    link: "/services/hardware-solutions",
+    link: "/services/rfid-solutions",
   },
   {
     title: "Third Party Administration",
     icon: "🤝",
     desc: "White-label deployment, integration support and partner administration services.",
-    link: "/services/third-party-admin",
+    link: "/services/automation-solutions",
   },
   {
     title: "Cloud & Automation",
@@ -134,7 +135,7 @@ export default function ServicesPage() {
               {service.desc}
             </p>
 
-            <a
+            <Link
   href={service.link}
   style={{
     display: "inline-block",
@@ -148,7 +149,7 @@ export default function ServicesPage() {
   }}
 >
   Learn More
-</a>
+</Link>
           </div>
         ))}
       </section>

@@ -1,231 +1,228 @@
 import Link from "next/link";
 import {
-  Globe,
-  Code2,
-  LayoutDashboard,
-  Smartphone,
   Cloud,
+  Server,
+  Database,
+  ShieldCheck,
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
 
-export default function WebDevelopmentPage() {
+export default function CloudSolutionsPage() {
   const services = [
     {
-      title: "Business Websites",
-      icon: Globe,
-      desc: "Modern responsive websites for companies, startups and institutions.",
-    },
-    {
-      title: "Custom Web Apps",
-      icon: Code2,
-      desc: "Scalable applications tailored to your business workflow.",
-    },
-    {
-      title: "Admin Dashboards",
-      icon: LayoutDashboard,
-      desc: "Powerful admin panels with analytics and management tools.",
-    },
-    {
-      title: "Mobile Responsive UI",
-      icon: Smartphone,
-      desc: "Optimized experience across desktop, tablet and mobile devices.",
-    },
-    {
-      title: "Cloud Integration",
+      title: "Cloud Infrastructure",
       icon: Cloud,
-      desc: "Secure deployment and cloud-connected infrastructure solutions.",
+      desc: "Secure and scalable cloud hosting solutions for modern businesses.",
+    },
+    {
+      title: "Database Management",
+      icon: Database,
+      desc: "Reliable cloud databases with backup, monitoring and optimization.",
+    },
+    {
+      title: "Server Deployment",
+      icon: Server,
+      desc: "Deploy and manage applications on cloud servers with high availability.",
+    },
+    {
+      title: "Security & Backup",
+      icon: ShieldCheck,
+      desc: "Data protection, automated backups and disaster recovery planning.",
     },
   ];
 
-  const features = [
-    "Modern UI/UX Design",
-    "SEO Optimized Structure",
-    "Fast Loading Performance",
-    "Secure Architecture",
-    "Scalable Solutions",
-    "Cross Device Compatibility",
+  const benefits = [
+    "Scalable cloud infrastructure",
+    "High availability architecture",
+    "Automated backups",
+    "Enhanced security",
+    "Performance monitoring",
+    "Reduced operational costs",
   ];
 
   return (
-    <main className="bg-black text-white">
-      {/* HERO SECTION */}
-      <section className="relative overflow-hidden py-24 px-6">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-cyan-500/10 to-transparent blur-3xl" />
+    <main
+      style={{
+        minHeight: "100vh",
+        background:
+          "linear-gradient(to right, #020617, #0f172a, #3b0764)",
+        color: "white",
+        padding: "140px 40px 80px",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "1300px",
+          margin: "0 auto",
+        }}
+      >
+        {/* Hero */}
+        <div
+          style={{
+            textAlign: "center",
+            marginBottom: "80px",
+          }}
+        >
+          <h1
+            style={{
+              fontSize: "clamp(42px, 6vw, 72px)",
+              marginBottom: "20px",
+            }}
+          >
+            Cloud & Automation Solutions
+          </h1>
 
-        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <p className="text-cyan-400 font-semibold mb-4">
-              Web Development Services
-            </p>
+          <p
+            style={{
+              maxWidth: "850px",
+              margin: "0 auto",
+              fontSize: "20px",
+              lineHeight: "1.8",
+              color: "#cbd5e1",
+            }}
+          >
+            Modern cloud infrastructure, secure hosting, automation workflows,
+            monitoring systems and enterprise-grade deployment solutions for
+            growing organizations.
+          </p>
+        </div>
 
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Modern Websites & Web Applications
-            </h1>
+        {/* Services */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
+            gap: "30px",
+            marginBottom: "80px",
+          }}
+        >
+          {services.map((service, index) => {
+            const Icon = service.icon;
 
-            <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              EduAdminX builds responsive websites, SaaS platforms,
-              admin portals and cloud-enabled applications designed
-              for modern businesses and institutions.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="bg-cyan-500 hover:bg-cyan-400 transition px-6 py-3 rounded-xl font-semibold text-black"
+            return (
+              <div
+                key={index}
+                style={{
+                  background: "rgba(255,255,255,0.06)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  borderRadius: "20px",
+                  padding: "30px",
+                }}
               >
-                Contact Us
-              </Link>
+                <Icon size={42} color="#38bdf8" />
 
-              <Link
-                href="/demo"
-                className="border border-white/20 hover:border-cyan-400 transition px-6 py-3 rounded-xl font-semibold"
-              >
-                Book Demo
-              </Link>
-            </div>
-          </div>
+                <h3
+                  style={{
+                    marginTop: "20px",
+                    marginBottom: "15px",
+                    fontSize: "24px",
+                  }}
+                >
+                  {service.title}
+                </h3>
 
-          {/* RIGHT SIDE MOCKUP */}
-          <div className="relative">
-            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl p-6 shadow-2xl">
-              <div className="bg-black rounded-2xl p-4 border border-white/10">
-                <div className="grid grid-cols-3 gap-4 mb-4">
-                  <div className="h-20 rounded-xl bg-cyan-500/20" />
-                  <div className="h-20 rounded-xl bg-blue-500/20" />
-                  <div className="h-20 rounded-xl bg-purple-500/20" />
-                </div>
-
-                <div className="h-40 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 mb-4" />
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="h-24 rounded-xl bg-white/5" />
-                  <div className="h-24 rounded-xl bg-white/5" />
-                </div>
+                <p
+                  style={{
+                    color: "#cbd5e1",
+                    lineHeight: "1.8",
+                  }}
+                >
+                  {service.desc}
+                </p>
               </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
-      </section>
 
-      {/* SERVICES SECTION */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
-              What We Build
-            </h2>
-
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              We create scalable digital solutions that help businesses
-              automate operations and improve online presence.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-
-              return (
-                <div
-                  key={index}
-                  className="bg-white/5 border border-white/10 hover:border-cyan-400 transition rounded-3xl p-8 group"
-                >
-                  <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-6">
-                    <Icon className="text-cyan-400" size={28} />
-                  </div>
-
-                  <h3 className="text-2xl font-semibold mb-4">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-gray-400 leading-relaxed mb-6">
-                    {service.desc}
-                  </p>
-
-                  <div className="flex items-center gap-2 text-cyan-400 group-hover:translate-x-1 transition">
-                    Learn More <ArrowRight size={18} />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* FEATURES */}
-      <section className="py-20 px-6 bg-white/[0.02]">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-4xl font-bold mb-6">
-              Why Businesses Choose EduAdminX
-            </h2>
-
-            <p className="text-gray-400 leading-relaxed mb-8">
-              We focus on performance, scalability and modern design
-              to deliver solutions that grow with your business.
-            </p>
-
-            <div className="space-y-4">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-3"
-                >
-                  <CheckCircle2
-                    className="text-cyan-400"
-                    size={22}
-                  />
-
-                  <span className="text-gray-200">
-                    {feature}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-3xl border border-white/10 p-10">
-            <div className="space-y-4">
-              <div className="h-5 rounded-full bg-white/10 w-3/4" />
-              <div className="h-5 rounded-full bg-white/10 w-full" />
-              <div className="h-5 rounded-full bg-white/10 w-2/3" />
-
-              <div className="h-52 rounded-3xl bg-black/40 border border-white/10 mt-8" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto text-center bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-white/10 rounded-3xl p-12">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready To Build Your Next Digital Platform?
+        {/* Benefits */}
+        <div
+          style={{
+            background: "rgba(255,255,255,0.04)",
+            borderRadius: "24px",
+            padding: "40px",
+            marginBottom: "80px",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "40px",
+              marginBottom: "30px",
+            }}
+          >
+            Why Choose Our Cloud Solutions?
           </h2>
 
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let EduAdminX help you create scalable, secure and
-            modern digital solutions for your business.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/contact"
-              className="bg-cyan-500 hover:bg-cyan-400 transition px-8 py-4 rounded-xl font-semibold text-black"
-            >
-              Contact Us
-            </Link>
-
-            <Link
-              href="/services"
-              className="border border-white/20 hover:border-cyan-400 transition px-8 py-4 rounded-xl font-semibold"
-            >
-              Explore Services
-            </Link>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
+              gap: "20px",
+            }}
+          >
+            {benefits.map((item, index) => (
+              <div
+                key={index}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "12px",
+                }}
+              >
+                <CheckCircle2 color="#22c55e" />
+                <span>{item}</span>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
+
+        {/* CTA */}
+        <div
+          style={{
+            textAlign: "center",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "42px",
+              marginBottom: "20px",
+            }}
+          >
+            Ready to Move to the Cloud?
+          </h2>
+
+          <p
+            style={{
+              color: "#cbd5e1",
+              marginBottom: "30px",
+            }}
+          >
+            Let's discuss your infrastructure, automation and cloud strategy.
+          </p>
+
+          <Link href="/demo">
+            <button
+              style={{
+                background:
+                  "linear-gradient(to right, #06b6d4, #a21caf)",
+                border: "none",
+                color: "white",
+                padding: "16px 32px",
+                borderRadius: "12px",
+                fontSize: "18px",
+                fontWeight: "bold",
+                cursor: "pointer",
+              }}
+            >
+              Request Free Demo
+              <ArrowRight
+                size={18}
+                style={{ marginLeft: "10px", verticalAlign: "middle" }}
+              />
+            </button>
+          </Link>
+        </div>
+      </div>
     </main>
   );
 }

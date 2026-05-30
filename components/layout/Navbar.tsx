@@ -46,20 +46,20 @@ export default function Navbar() {
           Contact
         </Link>
 
-        <button
-          style={{
-            background:
-              "linear-gradient(to right, #06b6d4, #a21caf)",
-            border: "none",
-            color: "white",
-            padding: "12px 22px",
-            borderRadius: "10px",
-            fontWeight: "bold",
-            cursor: "pointer",
-          }}
-        >
-          Request Demo
-        </button>
+        <Link
+  href="/demo"
+  style={{
+    background:
+      "linear-gradient(to right, #06b6d4, #a21caf)",
+    color: "white",
+    padding: "12px 22px",
+    borderRadius: "10px",
+    fontWeight: "bold",
+    textDecoration: "none",
+  }}
+>
+  Request Demo
+</Link>
       </div>
     </nav>
   );

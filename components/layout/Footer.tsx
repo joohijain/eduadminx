@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Footer() {
   return (
     <footer
@@ -61,11 +62,11 @@ export default function Footer() {
               gap: "14px",
             }}
           >
-            <a href="/" style={linkStyle}>Home</a>
-            <a href="/services" style={linkStyle}>Services</a>
-            <a href="/about" style={linkStyle}>About</a>
-            <a href="/demo" style={linkStyle}>Demo</a>
-            <a href="/contact" style={linkStyle}>Contact</a>
+            <Link href="/" style={linkStyle}>Home</Link>
+            <Link href="/services" style={linkStyle}>Services</Link>
+            <Link href="/about" style={linkStyle}>About</Link>
+            <Link href="/demo" style={linkStyle}>Demo</Link>
+            <Link href="/contact" style={linkStyle}>Contact</Link>
           </div>
         </div>
 
@@ -79,20 +80,33 @@ export default function Footer() {
           >
             Services
           </h3>
+<div
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "14px",
+  }}
+>
+  <Link href="/services/rfid-solutions" style={linkStyle}>
+    RFID Solutions
+  </Link>
 
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "14px",
-            }}
-          >
-            <span style={textStyle}>RFID Solutions</span>
-            <span style={textStyle}>Website Development</span>
-            <span style={textStyle}>Desktop Applications</span>
-            <span style={textStyle}>Hardware Solutions</span>
-            <span style={textStyle}>Cloud Automation</span>
-          </div>
+  <Link href="/services/web-development" style={linkStyle}>
+    Website Development
+  </Link>
+
+  <Link href="/services/software-development" style={linkStyle}>
+    Desktop Applications
+  </Link>
+
+  <Link href="/services/rfid-solutions" style={linkStyle}>
+    Hardware Solutions
+  </Link>
+
+  <Link href="/services/cloud-solutions" style={linkStyle}>
+    Cloud Automation
+  </Link>
+</div>
         </div>
 
         {/* CONTACT */}
